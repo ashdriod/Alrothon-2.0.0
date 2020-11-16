@@ -8,6 +8,6 @@ display to the user on their mobile/web applications.
 
 # Commit 1
 ### 1.Done with the fron-end Part with various Graphs and charts
-<img src="Images/dashboard1.png">
+<img src="Images/Dashboard1.png">
 
 -----------
