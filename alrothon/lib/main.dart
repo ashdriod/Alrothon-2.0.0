@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
     ),
   ];
 
-  Material myTextItems(String title, String subtitle){
+  Material myTextItems(String title, var subtitle,String sym){
     return Material(
       color: Colors.white,
       elevation: 14.0,
@@ -74,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                   Padding(
                     padding: EdgeInsets.all(8.0),
-                    child:Text(subtitle,style:TextStyle(
+                    child:Text('$subtitle'+ sym,style:TextStyle(
                       fontSize: 30.0,
                     ),),
                   ),
@@ -259,6 +259,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    var bill = 576;
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(icon: Icon(Icons.menu), onPressed: () {
@@ -286,11 +287,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
             Padding(
               padding: const EdgeInsets.only(right:8.0),
-              child: myTextItems("Current Bill","576 ₹"),
+              child: myTextItems("Current Bill",bill*5," ₹"),
             ),
             Padding(
               padding: const EdgeInsets.only(right:8.0),
-              child: myTextItems("Total Usage","125.5 kWh"),
+              child: myTextItems("Total Usage",bill," kWh"),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
